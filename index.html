@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajam Sai Divya | Portfolio</title>
+
+<style>
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family:Arial; background:#0f172a; color:white;}
+
+header {
+  position:fixed;
+  width:100%;
+  background:#020617;
+  z-index:1000;
+}
+nav {
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+}
+nav ul {
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+nav a {
+  color:white;
+  text-decoration:none;
+}
+
+/* Sections */
+section {
+  padding:100px 20px;
+  text-align:center;
+}
+
+/* Hero */
+.hero {
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+}
+.hero h1 {
+  font-size:3rem;
+}
+.btn {
+  padding:10px 20px;
+  background:white;
+  color:#6366f1;
+  border-radius:5px;
+  margin:10px;
+  display:inline-block;
+  text-decoration:none;
+}
+
+/* Grid */
+.skill-grid, .project-grid {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+.card {
+  background:#1e293b;
+  padding:20px;
+  border-radius:10px;
+  width:250px;
+  transition:0.3s;
+}
+.card:hover {
+  transform:scale(1.05);
+}
+
+/* Footer */
+footer {
+  background:#020617;
+  padding:20px;
+}
+
+/* Light mode */
+.light {
+  background:white;
+  color:black;
+}
+.light .card { background:#ddd; }
+.light header { background:#ddd; }
+
+.toggle {
+  cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h2>Sai Divya</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="toggle" onclick="toggleMode()">🌙</li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Hi, I'm Rajam Sai Divya 👋</h1>
+  <p>C Programmer | DSA Enthusiast | Future Software Engineer</p>
+
+  <a href="#projects" class="btn">View Work</a>
+  <a href="https://www.linkedin.com/in/rajam-sai-divya-4a0b4a336" class="btn">LinkedIn</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Computer Science Engineering student at SR University.
+    Passionate about software development and problem solving.
+    Currently building strong foundations in Data Structures, OOPS, and core CS subjects.
+    A disciplined and motivated learner aiming to apply skills in real-world projects.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skill-grid">
+    <div class="card">C</div>
+    <div class="card">C++</div>
+    <div class="card">Data Structures</div>
+    <div class="card">OOPS</div>
+    <div class="card">Operating Systems</div>
+    <div class="card">Computer Organization</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="project-grid">
+
+    <div class="card">
+      <h3>Smart Medicine Dispenser</h3>
+      <p>
+        Developed using logic design and DSA concepts.
+        Helps automate medicine scheduling and reminders.
+      </p>
+    </div>
+
+ 
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: saidivya1124@gmail.com</p>
+  <p>Phone: 951-555-8089</p>
+  <p>
+    <a href="https://www.linkedin.com/in/rajam-sai-divya-4a0b4a336" style="color:#60a5fa;">
+      LinkedIn Profile
+    </a>
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Rajam Sai Divya</p>
+</footer>
+
+<script>
+// smooth scroll
+document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// dark/light toggle
+function toggleMode() {
+  document.body.classList.toggle('light');
+}
+</script>
+
+</body>
+</html>
